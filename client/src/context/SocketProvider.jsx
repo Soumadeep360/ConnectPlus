@@ -5,6 +5,7 @@ const SocketContext = React.createContext(null);
 
 export const useSocket = () => {
   const state = useContext(SocketContext);
+  console.log("Sta",state )
   if (!state) throw new Error("state is undefined");
 
   return state;

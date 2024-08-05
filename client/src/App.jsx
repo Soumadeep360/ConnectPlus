@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useSocket } from "./context/SocketProvider";
-import classes from "./app/page.module.css";
+import "./App.css"
 
 function App() {
   const { sendMessage, messages } = useSocket();
@@ -10,13 +10,15 @@ function App() {
     <div>
       <div>
         <input
-          onChange={(e) => setMessage(e.target.value)}
-          className={classes["chat-input"]}
+         onChange={(e) => setMessage(e.target.value)}
+          //className={classes["chat-input"]}
+          className = "chat-input"
           placeholder="Message..."
         />
         <button
-          onClick={(e) => sendMessage(message)}
-          className={classes["button"]}
+         onClick={(e) => sendMessage(message)}
+          // className={classes["button"]}
+          className = "button"
         >
           Send
         </button>
